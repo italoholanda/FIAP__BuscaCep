@@ -10,15 +10,21 @@ async function getAddress(cep) {
   return json;
 }
 
-function writeAddress(address) {
-  if (address.uf) {
-    document.querySelector("#address").innerHTML =
-      `<li>${address.logradouro}</li>` +
-      `<li>${address.localidade}</li>` +
-      `<li>${address.uf}</li>`;
-  } else {
-    alert("CEP não encontrado.");
+function validateCEP(cep) {
+  if (cep.length != 8) {
+    alert("CEP não encontrado :(");
+    return (false);
   }
+  return (true);
+}
+
+function writeAddress(address) {
+if(address.erro)
+	return (validateCEP(0));
+  document.querySelector("#rua").value = `${address.logradouro}`;
+  document.querySelector("#bairro").value = `${address.bairro}`;
+  document.querySelector("#cidade").value = `${address.localidade}`;
+  document.querySelector("#uf").value = `${address.uf}`;
 }
 
 function getCEPAddress() {
@@ -26,12 +32,12 @@ function getCEPAddress() {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     let cep = getCep();
-    let address;
-
+    let address = null;
+    if (!validateCEP(cep)) return 0;
     try {
       address = await getAddress(cep);
     } catch (e) {
-      address = null;
+      return (false);
     }
     writeAddress(address);
   });

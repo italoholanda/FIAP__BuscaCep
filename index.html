@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<title>Exemplo API Cep</title>
-</head>
-<body>
-	<form>
-		<h1>Formulário</h1>
-		<input type="number" placeholder="Digite o seu CEP" id="">
-		<button>Buscar CEP</button>
-		<input type="text" placeholder="Nome da rua" id="rua">
-		<input type="text" placeholder="Bairro" id="bairro">
-		<input type="text" placeholder="Cidade" id="cidade">
-		<input type="text" placeholder="UF" id="uf">
-	</form>
-</body>
-<script src="./getCEPAddress.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Exemplo API Cep</title>
+  </head>
+  <body>
+    <div class="title">
+      <h1>Junte-se a nós! 😄</h1>
+      <p>
+        Precisamos de algumas informações<br />
+        antes de continuar.
+      </p>
+    </div>
+    <form>
+      <h2>Endereço</h2>
+      <label for="cep">CEP</label>
+      <div class="cep">
+        <input type="number" placeholder="Digite o seu CEP" id="cep" />
+        <button>Buscar</button>
+      </div>
+      <label for="rua">Nome da rua</label>
+      <input type="text" placeholder="Nome da rua" id="rua" />
+      <label for="bairro">Bairro</label>
+      <input type="text" placeholder="Bairro" id="bairro" />
+      <label for="cidade">Cidade</label>
+      <input type="text" placeholder="Cidade" id="cidade" />
+      <label for="uf">Estado</label>
+      <input type="text" placeholder="UF" id="uf" />
+    </form>
+  </body>
+  <script src="./getCEPAddress.js"></script>
 </html>

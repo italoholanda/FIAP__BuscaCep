@@ -1,35 +1,91 @@
-*{
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: #04492d;
+  color: #333;
+}
+
+.title {
+  margin: 0 20px 0 0;
+  color: #fff;
+}
+
+.title h1 {
+  margin: 0 0 9px 0;
+  color: #d8dbda;
+}
+
+.title h1::after {
+  content: "";
+  display: block;
+  background: #b1d62a;
+  height: 2px;
+  width: 40px;
+  margin: 4px 0;
+}
+
+.title p {
+  line-height: 1.5;
 }
 
 form {
-	padding: 20px;
-	border-radius: 5px;
-	background: #555;
-	display: flex;
-	flex-direction: column;
+  padding: 20px;
+  border-radius: 5px;
+  background: #e8ebea;
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.2);
 }
 
-body{
-	width: 100vw;
-	height: 100vh;
-	color: #fff;
-	background: #333;
+.cep {
 	display: flex;
 	align-items: center;
-	justify-content: center;
 }
 
-input{
-	border-radius: 5px;
-	padding: 5px 10px;
-	margin: 5px 0;
+.cep button {
+	width: 20%;
+	background: #b1d62a;
+	color: #04492d;
+	font-weight: bold;
+	border: 1px solid;
+  	border-radius: 8px;
+	border-color: transparent;
+	height: 40px;
+	cursor: pointer;
 }
 
-button {
-	display: block;
-	margin: 0 auto;
-	padding: 10px 14px;
+.cep input {
+	width: 200px;
+	margin-right: 4px;
+}
+
+input {
+  width: 90%;
+  border: 1px solid;
+  border-radius: 8px;
+  height: 30px;
+  border-color: #c2dad0;
+}
+
+label {
+	margin-top: 9px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px 0;
 }
